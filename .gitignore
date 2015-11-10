@@ -1,0 +1,6 @@
+*.falsl
+*.dx64fsl
+.#*
+#*
+*~
+scratchpad.lisp

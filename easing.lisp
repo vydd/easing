@@ -23,6 +23,8 @@
 		      (let ((,x (- 1 (* 2 (- ,x 0.5)))))
 			(+ 0.5 (/ (+ 1 (- ,@body)) 2))))))))))
 
+;; Default easings are Robert Penner's easing functions
+
 (defun linear (x) x)
 
 (defeasing sine (x)

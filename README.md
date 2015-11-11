@@ -1,6 +1,6 @@
 # Easing
 
-This library includes commonly used easing functions, implemented in Common Lisp. Included with the library is an example program (implemented using [Sketch](https://github.com/vydd/sketch)).
+This library includes commonly used easing functions (defined by Robert Penner), implemented in Common Lisp. Included with the library is an example program (implemented using [Sketch](https://github.com/vydd/sketch)).
 
 ![Easing](http://i.imgur.com/JVSj2zn.png)
 

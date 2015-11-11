@@ -2,7 +2,7 @@
 
 This library includes commonly used easing functions, implemented in Common Lisp. Included with the library is an example program (implemented using [Sketch](https://github.com/vydd/sketch)).
 
-![Easing](http://i.imgur.com/0q0y0b4.png)
+![Easing](http://i.imgur.com/JVSj2zn.png)
 
 ## Functions
 

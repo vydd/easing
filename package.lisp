@@ -2,7 +2,7 @@
 
 (defpackage #:easing
   (:use #:cl)
-  (:export :linear
+  (:export :defeasing :linear
 	   :ease-in-sine :ease-out-sine :ease-in-out-sine
 	   :ease-in-cubic :ease-out-cubic :ease-in-out-cubic
 	   :ease-in-quad :ease-out-quad :ease-in-out-quad

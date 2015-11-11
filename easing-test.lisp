@@ -2,6 +2,11 @@
 
 (in-package #:easing-test)
 
+(defeasing custom (x)
+  (if (<= x 0.5)
+      (/ (1+ (truncate (* x 10))) 10)
+      (/ (1+ (truncate (* x 4))) 4)))
+
 (defsketch ease-test (:title "Easing" :width 1200 :height 600)
     ((rows 4)
      (cols 8)
@@ -20,7 +25,8 @@
 	     ease-in-circ ease-out-circ ease-in-out-circ
 	     ease-in-elastic ease-out-elastic ease-in-out-elastic
 	     ease-in-back ease-out-back ease-in-out-back
-	     ease-in-bounce ease-out-bounce ease-in-out-bounce)))
+	     ease-in-bounce ease-out-bounce ease-in-out-bounce
+	     ease-in-custom)))
       (dotimes (y rows)
 	(dotimes (x cols)
 	  (with-identity-matrix

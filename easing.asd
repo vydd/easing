@@ -1,9 +1,10 @@
 ;;;; easing.asd
 
 (asdf:defsystem #:easing
-  :description "Describe easing here"
+  :description "Easing functions."
   :author "Danilo Vidovic (vydd)"
   :license "MIT"
+  :depends-on (#:alexandria)
   :serial t
   :components ((:file "package")
                (:file "easing")))

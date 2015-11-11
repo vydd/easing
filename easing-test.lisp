@@ -4,8 +4,10 @@
 
 (defsketch ease-test (:title "Easing" :width 1200 :height 600)
     ((rows 4)
-     (cols 8))
+     (cols 8)
+     (frames 0))
   (background (gray 0.8))
+  (setf frames (mod (1+ frames) 100))
   (with-pen (make-pen :stroke (gray 0))
     (let ((funcs 	   
 	   '(linear
@@ -25,16 +27,18 @@
 	    (translate (* x (/ width cols)) (* y (/ height rows)))
 	    (scale (/ width cols) (/ height rows))
 	    (with-pen (make-pen :fill (gray 1))
-	      (rect 0.1 0.1 0.9 0.9))
-	    (translate 0.1 0.9)
-	    (scale 0.8 -0.8)
+	      (rect 0.1 0.2 0.9 0.8))
+	    (translate 0.1 0.8)
+	    (scale 0.8 -0.6)
 	    (when (consp funcs)
-	      (draw-easing (car funcs))
+	      (draw-easing (car funcs) frames)
 	      (setf funcs (cdr funcs)))))))))
 
-(defun draw-easing (fn)
+(defun draw-easing (fn frames)
   (loop for i from 0 upto 0.99 by 0.01 do
-       (line i (funcall fn i) (+ i 0.01) (funcall fn (+ i 0.01)))))
+       (line i (funcall fn i) (+ i 0.01) (funcall fn (+ i 0.01))))
+  (with-pen (make-pen :fill (rgb 1 0 0))
+    (ellipse 1.0 (funcall fn (/ frames 100)) 0.04 0.04)))
 
 (defun test ()
   (make-instance 'ease-test))

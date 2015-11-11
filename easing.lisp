@@ -2,8 +2,6 @@
 
 (in-package #:easing)
 
-;;; "easing" goes here. Hacks and glory await!
-
 (defmacro make-easing (name &body body)
   `(progn
      (defun ,(alexandria:symbolicate 'ease-in- name) (x)

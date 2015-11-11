@@ -2,7 +2,7 @@
 
 This library includes commonly used easing functions, implemented in Common Lisp. The functions are defined on [0, 1] domain and their codomain mostly lies in [0, 1] as well - only exceptions being functions like bounce and elastic, which overshoot. Included with the library is an example program (implemented using [Sketch](https://github.com/vydd/sketch)).
 
-![Easing](http://imgur.com/0q0y0b4)
+![Easing](http://i.imgur.com/0q0y0b4.png)
 
 ## Functions
 

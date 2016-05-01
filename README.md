@@ -6,4 +6,4 @@ This library includes commonly used easing functions (defined by Robert Penner),
 
 ## Functions
 
-linear ease-in-sine ease-out-sine ease-in-out-sine ease-in-cubic ease-out-cubic ease-in-out-cubic ease-in-quad ease-out-quad ease-in-out-quad ease-in-quart ease-out-quart ease-in-out-quart ease-in-quint ease-out-quint ease-in-out-quint ease-in-exp ease-out-exp ease-in-out-exp ease-in-circ ease-out-circ ease-in-out-circ ease-in-elastic ease-out-elastic ease-in-out-elastic ease-in-back ease-out-back ease-in-out-back ease-in-bounce ease-out-bounce ease-in-out-bounce
+linear in-sine out-sine in-out-sine in-cubic out-cubic in-out-cubic in-quad out-quad in-out-quad in-quart out-quart in-out-quart in-quint out-quint in-out-quint in-exp out-exp in-out-exp in-circ out-circ in-out-circ in-elastic out-elastic in-out-elastic in-back out-back in-out-back in-bounce out-bounce in-out-bounce

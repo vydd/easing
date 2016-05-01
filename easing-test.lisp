@@ -9,19 +9,19 @@
 
 (defparameter *easings*
   '(linear
-    ease-in-sine ease-out-sine ease-in-out-sine
-    ease-in-cubic ease-out-cubic ease-in-out-cubic
-    ease-in-quad ease-out-quad ease-in-out-quad
-    ease-in-quart ease-out-quart ease-in-out-quart
-    ease-in-quint ease-out-quint ease-in-out-quint
-    ease-in-exp ease-out-exp ease-in-out-exp
-    ease-in-circ ease-out-circ ease-in-out-circ
-    ease-in-elastic ease-out-elastic ease-in-out-elastic
-    ease-in-back ease-out-back ease-in-out-back
-    ease-in-bounce ease-out-bounce ease-in-out-bounce
-    ease-in-custom))
+    in-sine out-sine in-out-sine
+    in-cubic out-cubic in-out-cubic
+    in-quad out-quad in-out-quad
+    in-quart out-quart in-out-quart
+    in-quint out-quint in-out-quint
+    in-exp out-exp in-out-exp
+    in-circ out-circ in-out-circ
+    in-elastic out-elastic in-out-elastic
+    in-back out-back in-out-back
+    in-bounce out-bounce in-out-bounce
+    in-custom))
 
-(defsketch ease-test (:title "Easing" :width 1200 :height 600 :debug :scancode-f1 :y-axis :up)
+(defsketch test (:title "Easing" :width 1200 :height 600 :debug :scancode-f1 :y-axis :up)
     ((rows 4)
      (cols 8)
      (frames 0))
@@ -48,4 +48,4 @@
     (circle 1.0 (funcall fn (/ frames 100)) 0.04)))
 
 (defun test ()
-  (make-instance 'ease-test))
+  (make-instance 'test))

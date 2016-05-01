@@ -5,16 +5,16 @@
 (defmacro defeasing (name args &body body)
   (let ((x (or (car args) 'x)))
     `(progn
-       (defun ,(alexandria:symbolicate 'ease-in- name) ,args
+       (defun ,(alexandria:symbolicate 'in- name) ,args
 	 (cond ((>= 0 ,x) 0)
 	       ((<= 1 ,x) 1)
 	       (t ,@body)))
-       (defun ,(alexandria:symbolicate 'ease-out- name) ,args
+       (defun ,(alexandria:symbolicate 'out- name) ,args
 	 (cond ((>= 0 ,x) 0)
 	       ((<= 1 ,x) 1)
 	       (t (let ((,x (- 1 ,x)))
 		    (1+ (- ,@body))))))
-       (defun ,(alexandria:symbolicate 'ease-in-out- name) ,args
+       (defun ,(alexandria:symbolicate 'in-out- name) ,args
 	 (cond ((>= 0 ,x) 0)
 	       ((<= 1 ,x) 1)
 	       (t (if (<= ,x 0.5)

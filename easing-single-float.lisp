@@ -1,6 +1,6 @@
 ;;;; easing.lisp
 
-(in-package #:easing-single-float)
+(in-package #:easing-f)
 
 (defconstant pi-sf 3.141592653589793s0)
 
@@ -15,9 +15,9 @@
 				    x
 				    'single-float))
 			      args))
-	(ease-in (alexandria:symbolicate 'ease-in- name :-f))
-	(ease-out (alexandria:symbolicate 'ease-out- name :-f))
-	(ease-in-out (alexandria:symbolicate 'ease-in-out- name :-f)))
+	(ease-in (alexandria:symbolicate 'in- name))
+	(ease-out (alexandria:symbolicate 'out- name))
+	(ease-in-out (alexandria:symbolicate 'in-out- name)))
     `(progn
        ;; in
        (declaim (inline ,ease-in)
@@ -60,9 +60,9 @@
 
 ;; The float versions
 
-(declaim (inline linear-f)
-         (ftype (function (single-float) single-float) linear-f))
-(defun linear-f (x)
+(declaim (inline linear)
+         (ftype (function (single-float) single-float) linear))
+(defun linear (x)
   (declare (optimize (speed 3) (safety 0) (debug 0))
 	   (single-float x))
   x)

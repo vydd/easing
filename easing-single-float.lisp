@@ -2,7 +2,8 @@
 
 (in-package #:easing-single-float)
 
-(defconstant pi-sf 3.141592653589793s0)
+(eval-when (:compile-toplevel :load-toplevel :execute)
+  (defconstant pi-sf 3.141592653589793s0))
 
 (defmacro defeasing-f (name args &body body)
   (let ((x (or (car args) 'x))

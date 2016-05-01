@@ -7,5 +7,5 @@
   :depends-on (#:alexandria)
   :serial t
   :components ((:file "package")
-               (:file "easing")))
-
+               (:file "easing")
+	       (:file "easing-single-float")))

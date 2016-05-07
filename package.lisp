@@ -2,6 +2,7 @@
 
 (defpackage #:easing
   (:use #:cl)
+  (:nicknames :ease)
   (:export :defeasing :linear
 	   :in-sine :out-sine :in-out-sine
 	   :in-cubic :out-cubic :in-out-cubic
@@ -16,6 +17,7 @@
 
 (defpackage #:easing-f
   (:use #:cl)
+  (:nicknames :ease-f)
   (:export :defeasing :linear
 	   :in-sine :out-sine :in-out-sine
 	   :in-cubic :out-cubic :in-out-cubic

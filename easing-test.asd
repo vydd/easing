@@ -4,7 +4,8 @@
   :description "Easing functions test."
   :author "Danilo Vidovic (vydd)"
   :license "MIT"
-  :depends-on (#:alexandria #:easing #:sketch #:fiveam)
+  :depends-on (#:easing #:fiveam)
+  :pathname "t"
   :serial t
   :components ((:file "package-test")
                (:file "easing-test")))

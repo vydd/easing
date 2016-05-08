@@ -5,6 +5,7 @@
   :author "Danilo Vidovic (vydd)"
   :license "MIT"
   :depends-on (#:alexandria)
+  :pathname "src"
   :serial t
   :components ((:file "package")
                (:file "easing")

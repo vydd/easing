@@ -21,8 +21,11 @@
     ease:in-bounce ease:out-bounce ease:in-out-bounce))
 
 (defsketch demo
-    (:title "Easing demo" :width 1200 :height 600 :debug :scancode-f1 :y-axis :up)
-    ((rows 4)
+    ((title "Easing demo")
+     (width 1200)
+     (height 600)
+     (y-axis :up)
+     (rows 4)
      (cols 8)
      (frames 0))
   (background (gray 0.8))

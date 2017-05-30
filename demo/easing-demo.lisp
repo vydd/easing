@@ -37,6 +37,8 @@
        do (progn
 	    (with-identity-matrix
 	      (translate (* x (/ width cols)) (* y (/ height rows)))
+	      (with-font (make-font :size 12)
+		(text (symbol-name fn) 14 10))
 	      (scale (/ width cols) (/ height rows))
 	      (translate 0.1 0.2)
 	      (scale 0.8 0.6)
